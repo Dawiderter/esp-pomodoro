@@ -1,5 +1,3 @@
-//! LEDs utilty
-
 use esp_idf_svc::{
     hal::gpio::{Level, Output, OutputPin, PinDriver},
     sys::EspError,

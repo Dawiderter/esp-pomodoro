@@ -215,7 +215,7 @@ impl Pomodoro {
     }
 }
 
-/// This function is needed because i8::from_str_radix() isn't const yet
+/// This function is needed because i64::from_str_radix() isn't const yet
 ///
 /// https://github.com/rust-lang/rust/pull/99322
 const fn parse_i64(string: &str) -> i64 {
@@ -240,7 +240,7 @@ const fn parse_i64(string: &str) -> i64 {
     }
 }
 
-/// This function is needed because i8::from_str_radix() isn't const yet
+/// This function is needed because u64::from_str_radix() isn't const yet
 ///
 /// https://github.com/rust-lang/rust/pull/99322
 const fn parse_u64(string: &str) -> u64 {

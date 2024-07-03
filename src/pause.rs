@@ -44,20 +44,3 @@ impl<B : InputPin + OutputPin> PauseButton<PinDriver<'_,B,Input>> {
         Ok(lock.is_low())
     }
 }
-
-// let mut button = PinDriver::input(peripherals.pins.gpio4)?;
-// button.set_pull(Pull::Up)?;
-
-// thread::spawn({
-//     let is_paused = is_paused.clone();
-//     move || -> Result<(), EspError> {
-//         let is_paused = is_paused.clone();
-//         loop {
-//             block_on(async { button.wait_for_falling_edge().await })?;
-//             sleep(Duration::from_millis(50));
-//             if button.is_low() {
-//                 let paused = is_paused.fetch_xor(true, Ordering::SeqCst);
-//             }
-//         }
-//     }
-// });
